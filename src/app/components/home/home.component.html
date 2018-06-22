@@ -1,2 +1,2 @@
-<app-load></app-load>
-<app-tarjetas [items]="newReleases"></app-tarjetas>
+<app-load *ngIf="loading" class="m-5"></app-load>
+<app-tarjetas class="animated fadeIn" *ngIf="!loading" [items]="newReleases"></app-tarjetas>
