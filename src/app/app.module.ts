@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-
+import { NRoutingModule } from './app.routes';
 
 
 //Rutas
@@ -18,12 +18,15 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NabvarComponent } from './components/share/nabvar/nabvar.component';
-import { NRoutingModule } from './app.routes';
+import { TarjetasComponent } from './components/share/tarjetas/tarjetas.component';
+import { LoadComponent } from './components/share/load/load.component';
+
 
 //Pipes
 import { NoImagePipe } from './pipes/no-image.pipe';
-import { TarjetasComponent } from './components/share/tarjetas/tarjetas.component';
-import { LoadComponent } from './components/share/load/load.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
+
+
 
 
 @NgModule({
@@ -36,6 +39,7 @@ import { LoadComponent } from './components/share/load/load.component';
     NoImagePipe,
     TarjetasComponent,
     LoadComponent,
+    DomseguroPipe
     
   ],
   imports: [

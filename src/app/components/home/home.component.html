@@ -1,2 +1,6 @@
-<app-load *ngIf="loading" class="m-5"></app-load>
+<app-load *ngIf="loading && !error" class="m-5"></app-load>
+<div class="alert alert-danger animated fadeIn" *ngIf="error">
+    <h3>Error</h3>
+    <p>{{ messageError}} </p>
+</div>
 <app-tarjetas class="animated fadeIn" *ngIf="!loading" [items]="newReleases"></app-tarjetas>

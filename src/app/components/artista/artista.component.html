@@ -6,7 +6,7 @@
     <div class="col">
         <h3>{{ artista.name }}</h3>
         <p>
-            <a [href]="artista.external_url.spotify">
+            <a [href]="artista.external_urls.spotify">
               Ir a la pagina del artista
             </a>
         </p>
@@ -16,4 +16,36 @@
           Regresar     
         </button>
     </div>
+</div>
+
+<div class="row md-5 main-conteiner">
+    <div class="col">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Album</th>
+                    <th>cancion</th>
+                    <th>Vista Previa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cancion of topTracks">
+                    <td>
+                        <img [src]="cancion.album.images | noImage" class="img-thumb" alt="">
+                    </td>
+                    <td>{{ cancion.album.name }}</td>
+                    <td>{{ cancion.name}} </td>
+                    <td>
+                        <!-- <audio [src]="cancion.preview_url" controls></audio> -->
+                        <iframe [src]=" cancion.uri | domseguro" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
 </div>
