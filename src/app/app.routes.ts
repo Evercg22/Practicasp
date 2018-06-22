@@ -11,8 +11,15 @@ import { ArtistaComponent } from './components/artista/artista.component';
 const ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'search', component: SearchComponent },
-    { path: '**', redirectTo: '/home'}
+    { path: 'artist/:id', component: ArtistaComponent},
 
+
+
+
+
+    
+    { path: '**', redirectTo: '/home'}
+    
     //{ path: 'path/:routeParam', component: MyComponent },
     //{ pathROUTES: 'staticPath', component: ... },
     //{ path: '**', component: ... },
